@@ -1,0 +1,10 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<form method="post">
+<input type="text" name="Email" value="@Model.Email" placeholder="Email" class="form-control" />
+<span class="text-danger">@Html.ValidationMessage("Email")</span>
+</form>

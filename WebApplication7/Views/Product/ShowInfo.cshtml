@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewBag.Title = "ShowInfo";
+}
+
+<h2>ShowInfo</h2>
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Qty</th>
+        <th>Cid</th>
+        <th>Category Name</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.price</td>
+            <td>@item.qty</td>
+            <td>@item.C_id</td>
+            <td>@item.Catagory1</td>
+        </tr>
+
+    }
+</table>
+

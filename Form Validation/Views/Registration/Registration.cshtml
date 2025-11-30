@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewBag.Title = "Registration";
+}
+@Html.ValidationSummary();
+<h2>Registration</h2>
+<form method="post" class="form-control">
+    <label> Name :</label>
+    <input type="text" name="Name" value="@Model.Name" class="form-control" />
+    <span class="text-danger">@Html.ValidationMessage("Name")</span>
+    <label> Name :</label>
+
+    <input type="email" name="Email" value="@Model.Email"  class="form-control" />
+    <span class="text-danger">@Html.ValidationMessage("Email")</span>
+    <label> Name :</label>
+
+    <input type="text" name="UserName" value="@Model.UserName"  class="form-control" />
+    <span class="text-danger">@Html.ValidationMessage("UserName")</span>
+
+    <input type="submit" value="Registration" class="btn btn-primary" />
+
+
+</form>
+
