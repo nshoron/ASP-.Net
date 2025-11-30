@@ -1,0 +1,38 @@
+﻿
+@{
+    ViewBag.Title = "ProductList";
+}
+
+@if (TempData["msg"] != null)
+{
+    <p class="alert alert-info">@TempData["msg"]</p>
+}
+
+
+<h2>ProductList</h2>
+
+<div>
+    <button class="btn btn-primary mt-2" type="submit">Add Product</button>
+</div>
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Qty</th>
+        <th>Cid</th>
+        <th>Category Name</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Id</td>
+            <td>@item.Name</td>
+            <td>@item.Price</td>
+            <td>@item.Qty</td>
+            <td>@item.Cid</td>
+            <td>@item.Category.Name</td>
+        </tr>
+
+    }
+</table>
